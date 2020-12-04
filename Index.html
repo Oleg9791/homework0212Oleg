@@ -6,23 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .im {
-            width: 250px;
-            padding: 250px 50px;
-        }
-
         body {
-            background-color: rgb(155, 238, 20);
+            background-color: rgb(129, 197, 218);
+        }
+        .picture {
+            text-align: center;
+        }
+        :root{
+            --img-size: 250px;
+        }
+        .im{
+            width: var(--img-size);
+            filter: grayscale(100%) drop-shadow(1px 1px 1px rgb(255, 255, 255)) blur(2px);
+            border: 0px solid black;
+            transition: 0.6s linear;
+            padding: 6px;
+            margin: 20px;
+        }
+        .im:hover{
+            filter: grayscale(0%) drop-shadow(6px 6px 10px grey);
+            border: 5px solid rgb(93, 121, 163);
+            transform: rotate3d(0, 0, 1, 360deg);
         }
     </style>
 </head>
 
 <body>
+    <div class="picture">
     <img class="im" src="image1.jpg" alt="image">
     <img class="im" src="image2.jpg" alt="image">
     <img class="im" src="image3.jpg" alt="image">
     <img class="im" src="image4.jpg" alt="image">
     <img class="im" src="image5.jpg" alt="image">
+    </div>
 </body>
 
 </html>
